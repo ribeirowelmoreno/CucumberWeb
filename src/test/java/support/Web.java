@@ -13,7 +13,7 @@ public class Web {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        driver.get("http://automationpractice.com/");
+        driver.get("https://www.amazon.com.br/");
 
         return driver;
 
