@@ -1,5 +1,6 @@
 package pages;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -42,6 +43,13 @@ public class ProceedToCheckoutPage {
         driver.findElement(By.cssSelector("a[tabindex=\"0\"][class=\"a-declarative update-quantity-button a-size-mini\"]")).click();
 
         return new CartPage(driver);
+    }
+
+    public ProceedToCheckoutPage QuantityChangedAssert(String xpath, String expectedResult){
+        driver.findElement(By.id(xpath));
+        Assert.assertEquals(xpath, expectedResult);
+
+        return this;
     }
 
 }

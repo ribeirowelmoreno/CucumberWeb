@@ -25,7 +25,7 @@ public class LoginSteps {
             .StartLogin();
 }
 
-    @And("insert the correct {string} and {string}")
+    @When("insert the correct {string} and {string}")
     public void insert_the_correct_and(String email, String password) {
     new MainPage(driver)
         .InsertEmailAndContinue(email, password);
@@ -49,7 +49,7 @@ public class LoginSteps {
                 .ClickingOnProduct("//*[@id=\"search\"]//h2//span[contains(text(), \"Mouse Gamer PRO M5 RGB Preto FORTREK, Fortrek, Mouses\")]");
     }
 
-    @Then("change the quantity")
+    @And("change the quantity")
     public void change_the_quantity() {
         new ProceedToCheckoutPage(driver)
                 .ChangeQuantity();
@@ -67,16 +67,28 @@ public class LoginSteps {
                 .ClickOnCartIcon();
     }
 
-    @Then("delete the product")
+    @And("delete the product")
     public void delete_the_product() {
         new CartPage(driver)
                 .DeleteAnProduct();
     }
 
+    @Then("I should see the product on the cart")
+    public void i_should_see_the_product_on_the_cart() {
+        new CartPage(driver)
+                .ProductAddedAssert("spc-orders", "spc-orders");
+    }
+
     @Then("proceed to checkout")
     public void proceed_to_checkout() {
-    new AddToCartPage(driver)
+        new AddToCartPage(driver)
             .ProceedToCheckout();
+    }
+
+    @Then("I should see the quantity was been changed")
+    public void i_should_see_the_quantity_was_been_changed() {
+        new ProceedToCheckoutPage(driver)
+                .QuantityChangedAssert("//*[@id=\"spc-orders\"]//div/span[@class=\"quantity-display\"]", "//*[@id=\"spc-orders\"]//div/span[@class=\"quantity-display\"]");
     }
 
     @Then("close browser")

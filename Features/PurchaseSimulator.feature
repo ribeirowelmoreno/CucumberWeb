@@ -5,11 +5,15 @@ Feature: Add product on cart
   Scenario Outline: Login with username and password correctly and search for a product
 
     Given user click in Faca seu Login
-    And insert the correct "<email>" and "<password>"
+
+    When insert the correct "<email>" and "<password>"
+
     And search for some "<product>"
     And click on first found product
     And add the product to cart
-    Then proceed to checkout
+    And proceed to checkout
+
+    Then I should see the product on the cart
     Then close browser
 
 
@@ -21,12 +25,16 @@ Feature: Add product on cart
   Scenario Outline: Login with username and password and add a new product on cart
 
     Given user click in Faca seu Login
-    And insert the correct "<email>" and "<password>"
+
+    When insert the correct "<email>" and "<password>"
+
     And search for some "<product>"
     And click on second found product
     And add the product to cart
     And proceed to checkout
-    Then change the quantity
+    And change the quantity
+
+    Then I should see the quantity was been changed
     Then close browser
 
 
@@ -38,9 +46,13 @@ Feature: Add product on cart
     Scenario Outline: Delete the product from cart
 
       Given user click in Faca seu Login
-      And insert the correct "<email>" and "<password>"
+
+      When insert the correct "<email>" and "<password>"
+
       And click on cart icon
-      Then delete the product
+      And delete the product
+
+      Then I make sure the product was been deleted
       Then close browser
 
       Examples:

@@ -29,8 +29,8 @@
   <component name="ProjectId" id="1TW7qqn0tT601TjtWsFQFsKXTMx" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ChromeDriver" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Appium/appium" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.general" />
@@ -60,7 +60,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestRunner">
+  <component name="RunManager" selected="Cucumber java.Scenario: Login with username and password and add a new product on cart">
     <configuration name="Feature: login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -139,27 +139,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Login with username and password and add a new product on cart (1)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="CUCUMBER_CORE_VERSION" value="4" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/Features/AddSecondProduct.feature" />
-      <option name="GLUE" value="stepDefinitions" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="DesafioCIANDTWithCucumber" />
-      <option name="NAME_FILTER" value="^Login with username and password and add a new product on cart$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm4SMFormatter --name &quot;^Login with username and password and add a new product on cart$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Login with username and password and add a new product on cart" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Scenario: Login with username and password and add a new product on cart (2)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -181,11 +160,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Login with username and password correctly and search for a product (1)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Login with username and password and add a new product on cart" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="CUCUMBER_CORE_VERSION" value="4" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/Features/AddFirstProduct.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/Features/PurchaseSimulator.feature" />
+      <option name="GLUE" value="stepDefinitions" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="DesafioCIANDTWithCucumber" />
+      <option name="NAME_FILTER" value="^Login with username and password and add a new product on cart$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm4SMFormatter --name &quot;^Login with username and password and add a new product on cart$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Login with username and password and add a new product on cart" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Login with username and password correctly and search for a product" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="CUCUMBER_CORE_VERSION" value="4" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/Features/PurchaseSimulator.feature" />
       <option name="GLUE" value="stepDefinitions" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="DesafioCIANDTWithCucumber" />
@@ -338,19 +338,19 @@
     </configuration>
     <list>
       <item itemvalue="Cucumber java.Feature: login" />
-      <item itemvalue="Cucumber java.Scenario: Login with username and password and add a new product on cart (1)" />
       <item itemvalue="Cucumber java.Scenario: Login with username and password and add a new product on cart (2)" />
-      <item itemvalue="Cucumber java.Scenario: Login with username and password correctly and search for a product (1)" />
       <item itemvalue="Cucumber java.Scenario: Delete the product from cart" />
       <item itemvalue="JUnit.TestRunner" />
+      <item itemvalue="Cucumber java.Scenario: Login with username and password correctly and search for a product" />
+      <item itemvalue="Cucumber java.Scenario: Login with username and password and add a new product on cart" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber java.Scenario: Login with username and password and add a new product on cart" />
+        <item itemvalue="Cucumber java.Scenario: Login with username and password correctly and search for a product" />
         <item itemvalue="JUnit.TestRunner" />
         <item itemvalue="Cucumber java.Scenario: Delete the product from cart" />
         <item itemvalue="Cucumber java.Scenario: Login with username and password and add a new product on cart (2)" />
-        <item itemvalue="Cucumber java.Scenario: Login with username and password correctly and search for a product (1)" />
-        <item itemvalue="Cucumber java.Scenario: Login with username and password and add a new product on cart (1)" />
       </list>
     </recent_temporary>
   </component>
