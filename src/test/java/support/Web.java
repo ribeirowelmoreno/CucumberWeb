@@ -8,7 +8,9 @@ import java.util.concurrent.TimeUnit;
 public class Web {
 
     public static WebDriver createChrome(){
-        System.setProperty("webdriver.chrome.driver", "D:\\Wellynton\\Projetos\\CucumberUdemy\\ChromeDriver\\chromedriver.exe");
+        //pega o path do diretório de quem baixar o projeto
+        String path = System.getProperty("user.dir");
+        System.setProperty("webdriver.chrome.driver", path + "\\src\\test\\resources\\chromedriver.exe");
 
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
