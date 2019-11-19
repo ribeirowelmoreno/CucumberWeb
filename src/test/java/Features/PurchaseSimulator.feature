@@ -49,6 +49,9 @@ Feature: Add product on cart
 
       When insert the correct "<email>" and "<password>"
 
+        And search for some "<product>"
+        And click on third found product
+        And add the product to cart
         And click on cart icon
         And delete the product
 
@@ -56,7 +59,7 @@ Feature: Add product on cart
       Then close browser
 
       Examples:
-        | email | password |
-        | conta.wel.teste.web@gmail.com | 421563 |
+        | email | password | product |
+        | conta.wel.teste.web@gmail.com | 421563 | Geladeira Consul Frost Free Duplex 405 litros cor Inox com Filtro Bem Estar |
 
 

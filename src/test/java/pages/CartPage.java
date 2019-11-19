@@ -18,9 +18,9 @@ public class CartPage {
         return this;
     }
 
-    public CartPage DeleteAnProduct(){
-        driver.findElement(By.xpath("//div[@class=\"a-fixed-left-grid-col a-col-right\"]//span[@class=\"a-declarative\"]//input[@aria-label=\"Excluir Mouse Gamer PRO M5 RGB Preto FORTREK, Fortrek, Mouses\"]")).isDisplayed();
-        driver.findElement(By.xpath("//div[@class=\"a-fixed-left-grid-col a-col-right\"]//span[@class=\"a-declarative\"]//input[@aria-label=\"Excluir Mouse Gamer PRO M5 RGB Preto FORTREK, Fortrek, Mouses\"]")).click();
+    public CartPage DeleteAnProduct(String product){
+        driver.findElement(By.xpath(product)).isDisplayed();
+        driver.findElement(By.xpath(product)).click();
 
         return this;
     }
@@ -29,6 +29,14 @@ public class CartPage {
         driver.findElement(By.id(id));
 
         Assert.assertEquals(id, expectedText);
+
+        return this;
+    }
+
+    public CartPage ProductHasBeenDeleted(String deleteMessage, String expectedMessage){
+        driver.findElement(By.xpath(deleteMessage));
+
+        Assert.assertEquals(deleteMessage, expectedMessage);
 
         return this;
     }

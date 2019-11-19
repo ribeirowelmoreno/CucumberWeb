@@ -70,7 +70,13 @@ public class PurchaseSimulatorSteps {
     @And("delete the product")
     public void delete_the_product() {
         new CartPage(driver)
-                .DeleteAnProduct();
+                .DeleteAnProduct("//div[@class=\"a-row sc-action-links\"]//span[@class=\"a-size-small sc-action-delete\"]//input[@aria-label=\"Excluir Geladeira Consul Frost Free Duplex 405 litros cor Inox com Filtro Bem Estar - 220V\"]");
+    }
+
+    @When("click on third found product")
+    public void click_on_third_found_product() {
+        new SearchResultPage(driver)
+                .ClickingOnProduct("//*[@id=\"search\"]//h2//span[contains(text(), \"Geladeira Consul Frost Free Duplex 405 litros cor Inox com Filtro Bem Estar - 220V\")]");
     }
 
     @Then("I should see the product on the cart")
@@ -89,6 +95,12 @@ public class PurchaseSimulatorSteps {
     public void i_should_see_the_quantity_was_been_changed() {
         new ProceedToCheckoutPage(driver)
                 .QuantityChangedAssert("//*[@id=\"spc-orders\"]//div/span[@class=\"quantity-display\"]", "//*[@id=\"spc-orders\"]//div/span[@class=\"quantity-display\"]");
+    }
+
+    @Then("I make sure the product was been deleted")
+    public void i_make_sure_the_product_was_been_deleted() {
+        new CartPage(driver)
+                .ProductHasBeenDeleted("//*[@id=\"sc-item-C250c1557-69d4-405b-a031-0580ec676348\"]", "//*[@id=\"sc-item-C250c1557-69d4-405b-a031-0580ec676348\"]");
     }
 
     @Then("close browser")
