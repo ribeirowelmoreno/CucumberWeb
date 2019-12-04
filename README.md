@@ -1,15 +1,21 @@
 *********Setup para Tests Web usando o Cucumber*********
 
 1- Baixar o Intellij e instalar
+
 2- Instalar o plugin "cucumber for java" (Select projec>file>settings>plugins)
 3- Criar um projeto "Maven"
+
 4- No pom.xml, adicionar as dependencias: cucumber-core, cucumber-html, cobertura, cucumber-java, cucumber-junit, cucumber-jvm-deps, cucumber-reporting, hamcrest-core, gherkin, selenium-java, junit
+
 5- Adicionar manualmente as libraries do Junit e Hamcrest
 	* Vai em: Project Structure>>Modules>>selecionar dependencias dentro de modules>>clicar no "+" no canto direito>>Library>>New Library>>Java>>Ir na pasta do Intellij>>lib>>selecionar a lib junit.4.12>>ok>>repedir o processo para a lib hamcrest-core
 6- Criar o diretório "ChromeDriver" na raiz do projeto e colocar o chromedriver dentro
+
 7- Criar o diretorio "Features" na raiz do projeto e criar um arquivo "nomeDoArquivo.feature"
+
 8- Criar um package "stepDefinition" ou algo que referencia "step" dentro de src>test>java
 	*Criar uma classe dentro desse diretorio (por exemplo LoginSteps)
+	
 9- Crie um package support dentro de src>test>java e crie uma classe Web dentro desse package
 	*dentro dessa classe vai ficar o setup de star do navegador:
 	
@@ -52,6 +58,7 @@
 	|email.exemple@ab.com | 123456 |
 	
 1-Com o botão direito do mouse, clique em cima da frase que está no Scenario Outline>>Run Scenario...ou CTRL+SHIFT+F10
+
 2-O teste vai começar a falhar, e no prompt do Intellij vai aparecer uma estrutura pra ser usada, algo como:
 
 	@Given("user is in home page")
@@ -97,6 +104,7 @@ Após feito isso, da pra rodar os testes igual no step 1
 *********Execução dos testes pelo TestRunner*********
 
 1- Crie um package dentro de src>test>java como testRunner
+
 2- Crie uma classe dentro dele com o mesmo nome, ou algo que referencie "runner"
 	*Dentro dessa classe, coloque os seguintes dados:
 	
